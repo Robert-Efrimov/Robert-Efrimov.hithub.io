@@ -25,7 +25,7 @@ function showChangePlanScreen() {
         messageElement.appendChild(document.createTextNode(' ')); // Espacio entre el mensaje y el enlace
         messageElement.appendChild(linkElement);
 
-        // Obtener el elemento donde quieres mostrar el mensaje (por ejemplo, el div con clase "current-weather")
+        // Obtener el elemento donde quieres mostrar el mensaje
         const currentWeatherDiv = document.querySelector('.current-weather');
 
         // Agregar el mensaje al DOM debajo del clima
@@ -53,7 +53,7 @@ function updateSearchCount() {
     }
 }
 
-// Restablecer el estado del mensaje cuando sea necesario (por ejemplo, al recargar la página)
+// Restablecer el estado del mensaje cuando sea necesario
 function resetPlanMessage() {
     planMessageShown = false;
 }
@@ -68,7 +68,6 @@ function resetSession() {
 const logoutButton = document.getElementById('logout-button');
 logoutButton.addEventListener('click', function() {
     resetSession(); // Llama a la función para reiniciar la sesión cuando se hace clic en el botón
-    // Realiza otras acciones de cierre de sesión si es necesario
     window.location.href = 'index.html';
 });
     
@@ -185,7 +184,7 @@ logoutButton.addEventListener('click', function() {
         });
     
         // Mostrar la tabla después de llenarla
-        hourlyTable.style.display = 'table'; // Cambia el estilo a "table" para mostrar la tabla
+        hourlyTable.style.display = 'table'; 
     }
     
     function showWeeklyForecast(data) {
